@@ -41,4 +41,9 @@ In this repo, we show the featureCounts result (.txt) and exploratory analysis r
 
 Here we show the stat of the featureCounts result.
 
+![stat](https://github.com/yuqcheng/ANGSD_project/blob/main/figure/featurecounts_stat.png)
+
+Then we generated dendrogram and PCA plots. The dendrogram is shown in the Rmd, we only show the PCA plot here. We can clearly see that the pca result is correspond with our 4 samples.
+
+![pca](https://github.com/yuqcheng/ANGSD_project/blob/main/figure/pca.png)
 
