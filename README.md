@@ -27,8 +27,18 @@ Here you can find all my fastq files and bam files in my scratch folder. (Please
 
 In this repo, we show all of the bash files that we used to run STAR.
 
+## STAR
+
+We construted the index folder with hg38.fa and hg38.ncbirefdata.gz.
+
+**STAR index PATH: /athena/angsd/scratch/yuc4009/refdata**
+
 ## FeatureCounts
 
 We use all 4\*3=12 bam files (collected in the bams_selected) to run featurecounts. The result is shown in the **/athena/angsd/scratch/yuc4009/featureCounts**.
 
 In this repo, we show the featureCounts result (.txt) and exploratory analysis result (.Rmd)
+
+Here we show the stat of the featureCounts result.
+
+
