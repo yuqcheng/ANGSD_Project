@@ -7,7 +7,9 @@ Androgen receptor (AR) is a survival factor for prostate cancer cells that plays
 
 ## Samples
 
-Here, we have 4 samples, each sample has 3 replicates. 
+RNA-Seq libraries were prepared using the Illumina TruSeq stranded mRNA kit, with 10 cycles of PCR amplification, starting from 500 ng of total RNA, at the Genome Technology Center (GTC) at New York University Langone Medical Center.
+
+Here, we have 4 samples (Cancer cells with different treatment), each sample has 3 replicates. 
 - **Sample 1: DMSO (treated with DMSO (vehicle))**
 - **Sample 2: Enz (treated with Enzalutamide, a androgen receptor (AR) target inhibitor)**
 - **Sample 3: NRG1 (treated with recombinant NRG1 peptide, a factor that induce CRPCs gain resistance to Enz)**
