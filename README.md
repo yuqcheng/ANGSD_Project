@@ -5,7 +5,9 @@ This project mainly focus on the gene expression analysis of CRPC.
 
 Androgen receptor (AR) is a survival factor for prostate cancer cells that plays an essential role in cancer progression. However, after a period of androgen deprivation treatment (ADT), cancer cells will develop resistance to castration. Previous studies have shown that the acquisition of such resistance is caused by the tumor microenvironment. A factor called NRG1 plays an important role in the resistance gaining process. In this study, we hypothesize that castration-resistant cancer cells (CRPCs) induced by NRG1 have different gene expression profiles from normal prostate cancer cells. This drug resistance is not entirely caused by the reactivation of AR-related pathways. There might be other pathways that allow cancer cells to survive, and CRPCs have different activated functional clusters from prostate cancer cells that have not developed drug resistance.
 
-We collected the bulk RNA-seq data of cancer cells with different treatments. We choose the sample treated with vehicle as control, the sample treated with Enzalutamide (Enz) as AR positive experiment and the sample treated with Enz and NRG1 and the reactivation experiment.
+Here, we show our analysis pipeline as follows.
+
+We collected the bulk RNA-seq data of cancer cells with different treatments. We choose the sample treated with vehicle as control, the sample treated with Enzalutamide (Enz) as AR positive experiment and the sample treated with Enz and NRG1 and the reactivation experiment. 
 
 ## Samples
 
