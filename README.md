@@ -7,6 +7,8 @@ Androgen receptor (AR) is a survival factor for prostate cancer cells that plays
 
 Here, we show our analysis pipeline as follows.
 
+![stat](https://github.com/yuqcheng/ANGSD_project/blob/main/figure/pipeline.png)
+
 We collected the bulk RNA-seq data of cancer cells with different treatments. We choose the sample treated with vehicle as control, the sample treated with Enzalutamide (Enz) as AR positive experiment and the sample treated with Enz and NRG1 and the reactivation experiment. 
 
 ## Samples
