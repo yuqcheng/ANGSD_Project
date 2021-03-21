@@ -17,6 +17,8 @@ Here you can find all my fastq files and bam files in my scratch folder. (Please
 
 **Fastq PATH: /athena/angsd/scratch/yuc4009/NRG1**
 
+**Trimmed fastq: /athena/angsd/scratch/yuc4009/NRG1/trim**
+
 **Bams PATH: /athena/angsd/scratch/yuc4009/bams && /athena/angsd/scratch/yuc4009/bams_selected**
 
 **Bamqc PATH: /athena/angsd/scratch/yuc4009/bamqc**
