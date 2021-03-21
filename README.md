@@ -29,7 +29,7 @@ In this repo, we show all of the bash files that we used to run STAR.
 
 ## STAR
 
-We construted the index folder with hg38.fa and hg38.ncbirefdata.gz.
+We construted the index folder with hg38.fa and hg38.ncbirefdata.gz. All the bash files are uploaded in the bashs file folder.
 
 **STAR index PATH: /athena/angsd/scratch/yuc4009/refdata**
 
