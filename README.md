@@ -53,3 +53,10 @@ Then we generated dendrogram and PCA plots. The dendrogram is shown in the Rmd, 
 
 ![pca](https://github.com/yuqcheng/ANGSD_project/blob/main/figure/pca.png)
 
+From the PCA plot, we can easily find that the 4 samples are clustered well, which means these four samples have a quite large difference inter-sample while a very small difference intra-replicates. This conclusion is biological meaningfully. 
+- For DMSO, it is only treated with the vehicle so that it should have a normal AR activity. 
+- For Enz, the sample is treated with Enzalutamide so that its AR activity is inhibited and the expression of AR-target genes are changes. 
+- For NRG1, the sample is treated with the recombinant NRG1 so that the NRG1-HER2 pathway is activated and NRG1-HER2 targeted genes are activated/inhibited. 
+- For Enz+NRG1, the AR pathway is inhibited and NRG1-HER2 pathway is activated. In this case, we can find what happens after the cancer cells gain drug resistance.
+
+So it is natural that we can gain 4 distinct clusters after PCA.
