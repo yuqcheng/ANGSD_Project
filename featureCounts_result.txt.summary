@@ -1,0 +1,13 @@
+Status	../bams_selected/DMSO_1.Aligned.sortedByCoord.out.bam	../bams_selected/DMSO_2.Aligned.sortedByCoord.out.bam	../bams_selected/DMSO_3.Aligned.sortedByCoord.out.bam	../bams_selected/Enz_1.Aligned.sortedByCoord.out.bam	../bams_selected/Enz_2.Aligned.sortedByCoord.out.bam	../bams_selected/Enz_3.Aligned.sortedByCoord.out.bam	../bams_selected/Enz+NRG1_1.Aligned.sortedByCoord.out.bam	../bams_selected/Enz+NRG1_2.Aligned.sortedByCoord.out.bam	../bams_selected/Enz+NRG1_3.Aligned.sortedByCoord.out.bam	../bams_selected/NRG1_1.Aligned.sortedByCoord.out.bam	../bams_selected/NRG1_2.Aligned.sortedByCoord.out.bam	../bams_selected/NRG1_3.Aligned.sortedByCoord.out.bam
+Assigned	92232926	95975044	82993276	78298089	70799206	79481486	74392888	77652098	78149738	80582118	81174817	74381400
+Unassigned_Unmapped	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_MappingQuality	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_MultiMapping	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Secondary	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Nonjunction	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_NoFeatures	7808255	7895798	7398595	7685352	7350492	7884114	6644123	6901031	7630131	6998491	7028993	6689436
+Unassigned_Overlapping_Length	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Ambiguity	13756301	12745646	13016959	12711621	12227924	13700060	12533489	12350583	14562781	13517453	12788122	12594730

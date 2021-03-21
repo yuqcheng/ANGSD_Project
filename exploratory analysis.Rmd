@@ -1,0 +1,86 @@
+---
+title: 'Exploratory Analysis'
+author: "Yuqi Cheng"
+date: "2021/3/20"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1.Read Summary file
+
+```{r cars}
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(tidyr)
+})
+
+read_gene <- read.csv("featureCounts_result.txt.summary", header = T, sep = '\t')
+colnames(read_gene) = c("Status","DMSO_1","DMSO_2","DMSO_3","Enz_1","Enz_2","Enz_3","Enz+NRG1_1","Enz+NRG1_2","Enz+NRG1_3","NRG1_1","NRG1_2","NRG1_3")
+
+read_gene <- gather(data = read_gene,
+                    key = "samples",
+                    value = "#reads", 
+                    "DMSO_1","DMSO_2","DMSO_3","Enz_1","Enz_2","Enz_3","Enz+NRG1_1","Enz+NRG1_2","Enz+NRG1_3","NRG1_1","NRG1_2","NRG1_3")
+
+read_gene <- read_gene[which(read_gene$`#reads`!=0),]
+read_gene$modes <- rep('gene_count',nrow(read_gene))
+
+g <- ggplot(read_gene, aes(fill=Status,y=`#reads`,x=samples)) + geom_bar(position="dodge", stat="identity")
+g <- g + coord_flip() + theme(legend.position = "bottom") + labs(title = "featureCounts Summary")
+
+g <- g + facet_grid(rows = vars(modes))
+
+print(g)
+
+```
+
+## 2.Exploratory analysis
+
+Then we do exploratory analysis.
+
+```{r exp}
+suppressPackageStartupMessages({
+  library(DESeq2)
+  library(magrittr)
+  library(ggplot2)
+})
+
+readcounts <- read.table("featureCounts_result.txt", header = T)
+
+colnames(readcounts) <- c(colnames(readcounts)[1:6], paste0("DMSO_", c(1:3)), paste0("Enz_", c(1:3)), paste0("Enz.NRG1_",c(1:3)), paste0("NRG1_",c(1:3)))
+rownames(readcounts) <- make.names(readcounts$Geneid)
+
+readcounts <- readcounts[,-c(1:6)]
+sample_info <- DataFrame(condition = c(rep("DMSO",3),rep("Enz",3),rep("Enz.NRG1",3),rep("NRG1",3)), row.names = colnames(readcounts))
+
+DESeq.ds <- DESeqDataSetFromMatrix(countData = readcounts,
+                                   colData = sample_info,
+                                   design = ~ condition)
+
+DESeq.rlog <- rlog(DESeq.ds, blind = T)
+
+#saveRDS(DESeq.ds, "featurecount_ds.rds")
+```
+
+Then we save the `DESeq.rlog` and `DESeq.ds` and generate dendrogram and PCA plots.
+
+```{r cor}
+corr_rlog <- cor(assay(DESeq.rlog), method = "pearson")
+corr_ds <- cor(assay(DESeq.ds), method = "pearson")
+
+par(mfrow=c(1,2))
+as.dist(1-corr_rlog) %>% hclust %>% plot(., labels = colnames(assay(DESeq.rlog)), main = "DESeq.rlog")
+as.dist(1-corr_ds) %>% hclust %>% plot(., labels =colnames(assay(DESeq.ds)),main = "DESeq.ds")
+```
+
+```{r pca}
+plotPCA(DESeq.rlog)
+```
+
+
