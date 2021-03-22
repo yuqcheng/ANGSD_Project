@@ -45,6 +45,8 @@ We use all 4\*3=12 bam files (collected in the bams_selected) to run featurecoun
 
 In this repo, we show the featureCounts result (.txt) and exploratory analysis result (.Rmd)
 
+## Exploratory Analysis
+
 Here we show the stat of the featureCounts result.
 
 ![stat](https://github.com/yuqcheng/ANGSD_project/blob/main/figure/featurecounts_stat.png)
@@ -60,3 +62,9 @@ From the PCA plot, we can easily find that the 4 samples are clustered well, whi
 - For Enz+NRG1, the AR pathway is inhibited and NRG1-HER2 pathway is activated. In this case, we can find what happens after the cancer cells gain drug resistance.
 
 So it is natural that we can gain 4 distinct clusters after PCA.
+
+Meanwhile, we perform the inter-sample Euclidean distance analysis to see the inter-sample relationship.
+
+![Eud_hm](https://github.com/yuqcheng/ANGSD_project/blob/main/figure/pheatmap.png)
+
+From the figure above, we can find that Enz+NRG1 treated sample and NRG1 treated sample have a relatively short distance, which means these two samples have a more correspond expression profile.
